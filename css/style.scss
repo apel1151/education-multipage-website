@@ -1,0 +1,1145 @@
+/* google font link*/ 
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+
+*{
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+img{
+    user-select: none;
+}
+
+$green: #0eb582;
+$light-green: #f0fdfa;
+$light-color: #777;
+$light-white: #eee;
+$black: #444;
+$white: #fff;
+$border: .1rem solid $green;
+$box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+
+@mixin grid($val){
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 2rem;
+}
+
+@mixin titleText($titleSize) {
+    font-size: $titleSize;
+    text-transform: capitalize;
+    color: $black;
+}
+
+@mixin graphText($graphSize) {
+    font-size: $graphSize;
+    line-height: 2;
+    color: $light-color;    
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar{
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track{
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background: $green;
+    }
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 3rem;
+    @include titleText(3.5rem);
+    border-bottom: $border;
+    padding-bottom: 1rem;
+}
+
+.heading-link{
+    text-align: center;
+    background: url(../image/heading-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    h3{
+        @include titleText(4rem);
+    }
+
+    p{
+        @include graphText(2rem);
+
+        a{
+            color: $green;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+}
+
+section{
+    padding: 5rem 10%;
+}
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    border: $border;
+    background: $light-green;
+    color: $green;
+
+    &:hover{
+        background: $green;
+        color: $white;
+    }
+}
+
+/*//////////////header section style starts/////////////////*/
+.header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $white;
+    box-shadow: $box-shadow;
+    display: flex;
+    align-items: center;
+    padding: 2rem 10%;
+    z-index: 1000;
+   
+
+    .logo{
+        margin-right: auto;
+        @include titleText(2.5rem);
+        
+        i{
+            color: $green;
+        }
+        span{
+            color: $green;
+        }
+    }
+    
+   .navbar a{
+       margin-right: 2rem;
+       @include titleText(2rem);
+
+       &:hover{
+           color: $green;
+       }
+   }
+
+    .icons div{
+        cursor: pointer;
+        font-size: 2.5rem;
+        color: $black;
+        margin-left: 1.5rem;
+
+        &:hover{
+            color: $green ;
+        }
+    }
+    #menu-btn{
+        display: none;
+    }
+
+   
+}
+/*//////////////header section style ends/////////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*//////////////account section style start///////////////*/
+.account-form{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 35rem;
+    background: $white;
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    height: 100%;
+    justify-content: center;
+    // box-shadow: 0 0 0 100vw rgba(0,0,0,.8);
+    z-index: 1200;
+    text-align: center;
+
+    &.active{
+        right: 0%;
+        box-shadow: 0 0 0 100vw rgba(0,0,0,.8);
+
+    }
+
+    #close-form{
+        position: absolute;
+        top: 1.5rem;
+        right: 2.5rem;
+        font-size: 4rem;
+        cursor: pointer;
+        color: $black;
+
+        &:hover{
+            transform: rotate(180deg);
+        }
+    }
+
+    form{
+        border: $border;
+        padding: 2rem;
+        display: none;
+
+        &.active{
+            display: block;
+        }
+        
+   
+        h3{
+            @include titleText(2.5rem);
+            padding-bottom: .5rem;
+            text-transform: uppercase;
+        }
+
+        .box{
+            width: 100%;
+            padding: 1.2rem 1.4rem;
+            font-size: 1.6rem;
+            margin: .7rem 0;
+            border: $border;
+        }
+
+        .flex{
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+
+            label{
+                font-size: 1.5rem;
+                color: $light-color;
+                cursor: pointer;
+                margin-right: auto;
+            }
+
+            a{
+                font-size: 1.5rem;
+                color: $light-color;
+
+                &:hover{
+                    text-decoration: underline;
+                    color: $green;
+                }
+            }
+        }
+        .btn{
+            width: 100%;
+            cursor: pointer;
+
+            &:hover{
+                color: $white;
+            }
+        }
+    }
+
+    .buttons .btn{
+        margin: 0 1rem;
+        cursor: pointer;
+
+        &.active{
+            background: $green;
+            color: $white;
+        }
+
+    }
+
+
+
+}
+/*//////////////account section style ends///////////////*/
+
+
+
+
+
+
+
+
+
+
+
+/*//////////////home section style starts///////////////*/
+       .home{
+           padding: 0;
+
+           .slide{
+               display: flex;
+               align-items: center;
+               height: 60rem;
+               background-size: cover !important;
+               background-position: center !important;
+
+               .content{
+                   width: 50rem;
+
+                   h3{
+                       @include titleText(5.5rem);
+                       color: $white;
+                   }
+
+                   p{
+                       @include graphText(1.6rem);
+                       color: $light-white;
+                       padding: 1rem 0;
+                   }
+               }
+           }
+
+       }
+/*//////////////home section style ends///////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*//////////////subjects section style starts///////////////*/
+         .subjects{
+
+            .box-container{
+                @include grid(16rem);
+
+                .box{
+                    padding: 5rem 3rem;
+                    text-align: center;
+                    border: $border;
+                    background: $light-green;
+                    cursor: pointer;
+
+                    &:hover{
+                        background: $green;
+                        
+                        
+
+                        h3{
+                            color: $white;
+                        }
+
+                        p{
+                            color: $white;
+                        }
+
+                    }
+
+                    img{
+                        height: 10rem;
+                        margin-bottom: .5rem;
+                    }
+
+                    h3{
+                        @include titleText(2rem);
+                        padding: .5rem 0;
+                    }
+
+                    p{
+                        @include graphText(1.5rem);
+                    }
+                }
+            }
+         }
+/*//////////////subjects section style ends///////////////*/
+
+
+
+
+
+
+
+
+
+/*//////////////home courses section style starts/////////*/
+.home-courses{
+    .slide{
+        text-align: center;
+        position: relative;
+        width: 30rem;
+        background: $light-green;
+        overflow: hidden;
+
+        &:hover img{
+            transform: scale(1.5);
+            transition: .9s;
+        }
+
+        &:hover .content{
+            bottom: 0;
+            height: 100%;
+            transition: .9s;
+            border-radius: 7px;
+
+            h3{
+                margin-top: 10rem;
+            }
+        }
+
+        .image{
+            padding: 2rem;
+
+            img{
+                width: 100%;
+                margin-bottom: 1.5rem;
+            }
+
+            h3{
+                @include titleText(3rem);
+            }
+        }
+
+        .content{
+            position: absolute;
+            bottom: -100%;
+            right: 0;
+            left: 0;
+            background: linear-gradient(rgba(0,0,0,0.5), #009688);
+        
+
+            h3{
+                @include titleText(4rem);
+                color: $white;
+                margin-top: 10px;
+            }
+
+            p{
+                padding: 1rem 0;
+                @include graphText(2rem);
+                color: $light-white;
+            }
+        }
+
+        &:hover .btn{
+            background: $white;
+            border-radius: 5px;
+            color: $black;
+        }
+    }
+}
+/*//////////////home courses section style ends///////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*//////////////About section style starts//////////*/
+.about{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    .image{
+        flex: 1 1 40rem;
+
+        img{
+            width: 100%;
+        }
+    }
+    
+    .content{
+        flex: 1 1 40rem;
+
+        .about-title{
+            @include titleText(3rem);
+        }
+
+        p{
+            @include graphText(1.5rem);
+            padding: 1rem 0;
+        }
+        .icons-container{
+            margin-top: 1rem;
+            @include grid(16rem);
+
+            .icons{
+                text-align: center;
+                padding: 3rem 2rem;
+                background: $light-green;
+                border: $border;
+                border-radius: 5px;
+
+                img{
+                    height: 7rem;
+                    margin-bottom: .5rem;
+                }
+
+                h3{
+                    padding: .5rem 0;
+                    @include titleText(3rem);
+                }
+
+                span{
+                    @include graphText(1.5rem);
+                }
+
+            }
+        }
+
+
+    }
+
+}
+/*//////////////About section style ends///////////*/
+
+
+
+
+
+
+
+
+
+
+
+/*//////////////Teacher section style starts///////////*/
+.teacher{
+
+    .slide{
+        text-align: center;
+        width: 30rem;
+
+        &:hover{
+
+            .image{
+                img{
+                    background: linear-gradient(rgba(0,0,0,0.5), #009688);
+
+                }
+
+                .share{
+                    bottom: 0;
+                }
+            }
+        }
+
+        .image{
+            position: relative;
+            overflow: hidden;
+
+            img{
+                background: $light-green;
+                width: 100%;
+            }
+
+            .share{
+                position: absolute;
+                bottom: -10rem;
+                right: 0;
+                left: 0;
+                background: rgba(0,0,0,.8);
+                padding: 3rem;
+
+                a{
+                    font-size: 3rem;
+                    margin: 0 1rem;
+                    color: $white;
+
+                    &:hover{
+                        color: $green;
+                    }
+                }
+
+               
+            }
+
+            .content{
+                display: flex;
+                padding-top: 2rem;
+                align-items: center;
+                justify-content: space-between;
+
+                h3{
+                    @include titleText(2rem);
+                }
+
+                span{
+                    @include graphText(1.5rem);
+                }
+            }
+        }
+    }
+}
+/*//////////////Teacher section style ends////////////*/
+
+
+
+
+
+
+
+
+
+
+
+/*//////////////Students reviews section style starts////////////*/
+        .reviews{
+
+            .slide{
+                text-align: center;
+                width: 30rem;
+
+                p{
+                    @include graphText(1.5rem);
+                    position: relative;
+                    background: $light-green;
+                    border: $border;
+                    margin-bottom: 3rem;
+                    padding: 2rem;
+
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        bottom: -1.2rem;
+                        left: 50%;
+                        transform: translateX(-50%) rotate(45deg);
+                        background: $light-green;
+                        border-bottom: $border;
+                        border-right: $border;
+                        height: 2rem;
+                        width: 2rem;
+                        
+                    }
+                }
+
+                img{
+                    height: 7rem;
+                    width: 7rem;
+                    border-radius: 50%;
+                }
+
+                h3{
+                    @include titleText(2.2rem);
+                    padding: .5rem 0;
+                }
+
+                .stars{
+                    font-size: 1.5rem;
+                    color: $green;
+
+                }
+            }
+        }
+/*//////////////Students reviews section style ends////////////*/
+
+
+
+
+
+
+
+
+
+
+
+/*//////////////Courses section style starts////////////*/
+
+.courses{
+
+    .box-container{
+        @include grid(30rem);
+
+        .box{
+
+            .image{
+                height: 25rem;
+                overflow: hidden;
+                position: relative;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                h3{
+                    @include titleText(1.5rem);
+                    position: absolute;
+                    top: 1rem;
+                    left: 1rem;
+                    background: rgb(233, 229, 223);
+                    padding: .5rem 1.5rem;
+                    border-radius: .5rem;
+                   
+                }
+            }
+
+            .content{
+
+                padding: 2rem;
+                text-align: center;
+                border: $border;
+
+                h3{
+                    @include titleText(2rem);
+                }
+
+                p{
+                    padding: 1rem 0;
+                    @include graphText(1.6rem)
+                }
+
+                .icons{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: 2rem;
+                    padding-top: 2rem;
+                    // border-top: $border;
+
+                    span{
+                        @include titleText(1.5rem);
+
+                        i{
+                            color: $green;
+                            padding-right: .5rem;
+                        }
+                    }
+                }
+            }
+
+            padding: 2rem;
+            &:hover .image img{
+                transform: scale(1.3);
+            }
+
+            &.hide{
+                display: none;
+            }
+        }
+    }
+
+    .load-more{
+        margin-top: 2rem;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+/*//////////////Courses section style ends////////////*/
+
+
+
+
+
+
+
+
+
+
+/*//////////////Contact section style starts////////////*/
+
+.contact{
+
+    .icons-container{
+        @include grid(25rem);
+        margin-bottom: 2rem;
+        
+
+        .icons{
+            text-align: center;
+            padding: 3rem 2rem;
+            border: $border;
+            background: $light-green;
+
+            i{
+                height: 6rem;
+                width: 6rem;
+                line-height: 6rem;
+                font-size: 2rem;
+                border-radius: 50%;
+                margin-bottom: .5rem;
+                color: $white;
+                background: $green;
+            }
+
+            h3{
+                @include titleText(1.7rem);
+                text-transform: lowercase;
+            }
+
+            p{
+                @include graphText(1.7rem);
+            }
+        }
+    }
+
+    .row{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        .image{
+            flex: 1 1 40rem;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        form{
+            flex: 1 1 40rem;
+            border: $border;
+            padding: 2rem ;
+
+            h3{
+                @include titleText(2.5rem);
+                padding-bottom: 1rem;
+            }
+
+            .box{
+                width: 100%;
+                padding: 1.2rem 1.4rem;
+                border: $border;
+                font-size: 1.6rem;
+                margin: .7rem 0;
+
+                &:focus{
+                    background: $green;
+                    color: $white;
+
+                    &::placeholder{
+                      color: $light-green;  
+                    }
+                }
+            }
+
+            textarea{
+                height: 15rem;
+                resize: none;
+            }
+        }
+    }
+}
+
+
+.faq{
+
+    .accordion-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+
+        .accordion{
+            flex: 1 1 40rem;
+            border: $border;
+
+            &.active{
+                .accordion-heading{
+                    background: $green;
+
+                    h3{
+                        color: $white;
+                    }
+
+                    i{
+                        color: $white;
+                        transform: rotate(180deg);
+                    }
+                }
+
+                .accordion-content{
+                    display: block;
+                }
+            }
+
+            .accordion-heading{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 1rem;
+                cursor: pointer;
+                padding: 1.5rem;
+
+                h3{
+                    @include titleText(2rem);
+                }
+
+                i{
+                    font-size: 2rem;
+                    color: $green;
+                }
+            }
+
+            .accordion-content{
+                padding: 1.5rem;
+                @include graphText(1.5rem);
+                border-top: $border;
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+/*//////////////Contact section style ends////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*//////////////footer section style starts///////////////*/
+       .footer{
+           background: $light-green;
+
+           .box-container{
+               @include grid(25rem);
+
+               .box{
+                   
+                    h3{
+                        @include titleText(2.2rem);
+                        padding: 1rem 0;
+
+                        i{
+                            color: $green;
+                        }
+                    }
+
+                    .share{
+                        margin-top: 4.5rem;
+                       
+                        a{
+                            width: 4.5rem;
+                            line-height: 4.5rem;
+                            font-size: 1.7rem;
+                            background-color: $green;
+                            color: $white;
+                            margin-right: .3rem;
+                            text-align: center;
+                            border-radius: 5px;
+
+                            &:hover{
+                                background-color: rgb(25, 121, 121);
+                                transform: translateY(-10px);
+                            }
+                        }
+
+                        
+                    }
+
+                    .link{
+                        @include graphText(1.5rem);
+                        padding: .5rem 0;
+                        display: block;
+
+                        &:hover{
+                            color: $green;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    p{
+                        @include graphText(1.5rem);
+                        padding: 1rem 0;
+                    }
+
+                    .email{
+                        width: 100%;
+                        padding: 1.2rem 1.4rem;
+                        font-size: 1.6rem;
+                        border: $border;
+                        margin-bottom: 1rem;
+                    }
+               }
+           }
+
+           .credit{
+               text-align: center;
+               margin-top: 3rem;
+               padding-top: 3rem;
+               @include titleText(2rem);
+               border-top: $border;
+
+               span{
+                   color: $green;
+               }
+           }
+       }
+/*//////////////footer section style ends///////////////*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 /*//////////////media-queries/////////////////*/
+
+
+
+/*//////////////header section media-queries starts/////////////////*/
+@media (max-width:991px){
+    .header{
+        padding: 2rem;
+    }
+    section{
+        padding: 3rem 5%;
+    }
+    html{
+        font-size: 55%;
+    }
+    
+}
+
+@media (max-width:768px){
+    .header{
+        #menu-btn{
+            display: inline-block;
+
+        }
+
+        .navbar.activ{
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        .fa-times{
+            transform: rotate(180deg);
+        }
+
+        .navbar{
+            position: absolute;
+            top: 99%;
+            left: 0;
+            right: 0;
+            background-color: $light-green;
+            display: flex;
+            flex-flow: column;
+            text-align: center;
+            padding: 2rem 0;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+            a{
+                margin: 1.5rem;
+                font-size: 2rem;
+                background-color: #0eb582;
+                color: $white;
+                border-radius: 1rem;
+                line-height: 4rem;
+
+    
+            }
+            
+        }
+    }
+
+    .home .slide .content h3{
+        font-size: 3rem;
+    }
+}
+
+@media (max-width:450px){
+    section{
+        padding: 1rem 3%;
+    }
+    .heading{
+        font-size: 3rem;
+    }
+    html{
+        font-size: 50%;
+    }
+
+    .about .content .about-title{
+        font-size: 4rem;
+    }
+
+    .about .content .icons-container{
+        display: flex;
+        flex-direction: column;
+
+        .icons{
+            width: 100%;
+        }
+    }
+
+
+}
+/*//////////////header section media-queries ends/////////////////*/
