@@ -132,7 +132,7 @@ section {
   margin-right: 2rem;
   font-size: 2rem;
   text-transform: capitalize;
-  color: #444;
+  color: #0eb582;
 }
 
 .header .navbar a:hover {
@@ -180,8 +180,8 @@ section {
 
 .account-form.active {
   right: 0%;
-  -webkit-box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
-          box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 0 0 100vw rgba(185, 241, 202, 0.8);
+          box-shadow: 0 0 0 100vw rgba(167, 234, 187, 0.8);
 }
 
 .account-form #close-form {
@@ -284,7 +284,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 60rem;
+  height: 70rem;
   background-size: cover !important;
   background-position: center !important;
 }
@@ -297,14 +297,14 @@ section {
   font-size: 5.5rem;
   text-transform: capitalize;
   color: #444;
-  color: #fff;
+  color: green;
 }
 
 .home .slide .content p {
   font-size: 1.6rem;
   line-height: 2;
   color: #777;
-  color: #eee;
+  color: green;
   padding: 1rem 0;
 }
 
@@ -395,7 +395,7 @@ section {
 }
 
 .home-courses .slide .image h3 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-transform: capitalize;
   color: #444;
 }
@@ -410,7 +410,7 @@ section {
 }
 
 .home-courses .slide .content h3 {
-  font-size: 4rem;
+  font-size: 2rem;
   text-transform: capitalize;
   color: #444;
   color: #fff;
@@ -419,7 +419,7 @@ section {
 
 .home-courses .slide .content p {
   padding: 1rem 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 2;
   color: #777;
   color: #eee;

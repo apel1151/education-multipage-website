@@ -400,13 +400,13 @@ section{
 
         &:hover img{
             transform: scale(1.5);
-            transition: .9s;
+            transition: .5s;
         }
 
         &:hover .content{
             bottom: 0;
             height: 100%;
-            transition: .9s;
+            transition: .5s;
             border-radius: 7px;
 
             h3{
@@ -436,7 +436,7 @@ section{
         
 
             h3{
-                @include titleText(4rem);
+                @include titleText(2rem);
                 color: $white;
                 margin-top: 10px;
             }
@@ -1024,27 +1024,6 @@ section{
            }
        }
 /*//////////////footer section style ends///////////////*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
